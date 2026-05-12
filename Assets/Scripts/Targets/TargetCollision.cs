@@ -3,13 +3,24 @@ using UnityEngine;
 
 public class TargetCollision : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem explosionParticle;
+    [SerializeField] private int scoreValue;
+    [SerializeField] private GameStatesEventSO gameStatesEvent;
+    
+    public static event Action<int> TargetDestroyed;
+    
     private void OnMouseDown()
     {
+        TargetDestroyed?.Invoke(scoreValue);
+        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
         Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!other.CompareTag("Bad"))
+            gameStatesEvent.Raise(GameState.GameOver);
+            
         Destroy(gameObject);
     }
 }

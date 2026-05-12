@@ -171,3 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb41e6e5c97fb2458ea93fa60c6ffd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TargetCollision
+  explosionParticle: {fileID: 3199346384015752365, guid: 307229a5540374aae98859caad2128a3, type: 3}
+  scoreValue: 5
+  gameStatesEvent: {fileID: 11400000, guid: 1f3e2bc3c66ccf44994c5b34640d3217, type: 2}
