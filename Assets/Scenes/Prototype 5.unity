@@ -1225,6 +1225,7 @@ GameObject:
   - component: {fileID: 1611319333}
   - component: {fileID: 1611319332}
   - component: {fileID: 1611319331}
+  - component: {fileID: 1611319335}
   m_Layer: 0
   m_Name: Sensor
   m_TagString: Untagged
@@ -1325,6 +1326,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1611319335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611319330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c11c8ac4aeb9ed48b59c2c4ba624610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SensorCollision
+  gameStatesEvent: {fileID: 11400000, guid: 1f3e2bc3c66ccf44994c5b34640d3217, type: 2}
 --- !u!1 &1782216108
 GameObject:
   m_ObjectHideFlags: 0

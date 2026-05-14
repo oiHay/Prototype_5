@@ -11,8 +11,11 @@ public class TargetCollision : MonoBehaviour
     
     private void OnMouseDown()
     {
-        TargetDestroyed?.Invoke(scoreValue);
-        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
-        Destroy(gameObject);
+        if (gameStatesEvent.gameStateAtual == GameState.Playing)
+        {
+            TargetDestroyed?.Invoke(scoreValue);
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            Destroy(gameObject);
+        }
     }
 }
