@@ -26,6 +26,7 @@ public class ScoreManager : MonoBehaviour
 
     private void HandleTargetDestroyed(int amount)
     {
+        if(!scoreText) return;
         _score += amount;
         scoreText.text = "Score: " + _score;
     }

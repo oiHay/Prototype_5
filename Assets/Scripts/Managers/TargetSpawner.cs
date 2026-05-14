@@ -37,6 +37,7 @@ public class TargetSpawner : MonoBehaviour
         
         if (state == GameState.Playing)
         {
+            StopAllCoroutines();
             StartCoroutine(SpawnTarget());
         }
     }

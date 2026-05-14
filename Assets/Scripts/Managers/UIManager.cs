@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
 
     private void HandleStateChanged(GameState state)
     {
+        if (!gameOverPanel) return;
         gameOverPanel.SetActive(state == GameState.GameOver);
     }
 }

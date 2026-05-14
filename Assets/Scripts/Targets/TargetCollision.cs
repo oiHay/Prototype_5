@@ -15,12 +15,4 @@ public class TargetCollision : MonoBehaviour
         Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
         Destroy(gameObject);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!other.CompareTag("Bad"))
-            gameStatesEvent.Raise(GameState.GameOver);
-            
-        Destroy(gameObject);
-    }
 }
