@@ -3,6 +3,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameStatesEventSO gameStateEvent;
+    [SerializeField] private GameObject startPanel;
     [SerializeField] private GameObject gameOverPanel;
 
     private void OnEnable()
@@ -17,7 +18,9 @@ public class UIManager : MonoBehaviour
 
     private void HandleStateChanged(GameState state)
     {
-        if (!gameOverPanel) return;
+        if (startPanel == null || gameOverPanel == null) return;
+        
+        startPanel.SetActive(state == GameState.Start);
         gameOverPanel.SetActive(state == GameState.GameOver);
     }
 }

@@ -21,13 +21,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        ChangeState(GameState.Playing);
+        ChangeState(GameState.Start);
     }
 
-    // private void Update()
-    // { 
-    //     Debug.Log(gameStatesEvent.gameStateAtual);
-    // }
+    private void Update()
+    { 
+        Debug.Log(gameStatesEvent.gameStateAtual);
+    }
 
     public void ChangeState(GameState newState)
     {
