@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa751ea33d7efa440bf974f068a8258f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DifficultyButtons
-  gameStateEvent: {fileID: 11400000, guid: 1f3e2bc3c66ccf44994c5b34640d3217, type: 2}
+  gameManager: {fileID: 1240884719}
   difficultyEvent: {fileID: 11400000, guid: 28c8bc97e51c2bf4e82d87d971cceb3c, type: 2}
   difficultySettings:
   - {fileID: 11400000, guid: 67586324c18e0ee4790cf0eb133ef807, type: 2}
@@ -2726,7 +2726,7 @@ Transform:
   m_GameObject: {fileID: 1611319330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalPosition: {x: 0, y: -6, z: 0}
   m_LocalScale: {x: 3, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2745,6 +2745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SensorCollision
   gameStatesEvent: {fileID: 11400000, guid: 1f3e2bc3c66ccf44994c5b34640d3217, type: 2}
+  gameManager: {fileID: 1240884719}
 --- !u!1 &1782216108
 GameObject:
   m_ObjectHideFlags: 0
@@ -3383,7 +3384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ba909241b3e454f91a009645ebcda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomSceneManager
-  gameStatesEvent: {fileID: 11400000, guid: 1f3e2bc3c66ccf44994c5b34640d3217, type: 2}
+  gameManager: {fileID: 1240884719}
 --- !u!4 &2129146546
 Transform:
   m_ObjectHideFlags: 0

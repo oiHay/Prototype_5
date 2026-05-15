@@ -24,14 +24,16 @@ public class ScoreManager : MonoBehaviour
 
     private void HandleStateChanged(GameState state)
     {
+        if (scoreText == null || scoreTotalText == null) return; // guard contra referências nulas
         if (state != GameState.Playing) return; // Se o estado do jogo não for "Playing", o resto do código do método não é lido
+       
         _score = 0; // Caso seja, o score começa como 0
         scoreText.text = "Score: " + _score; // O texto de score então é atualizado conforme o score muda
     }
 
     private void HandleTargetDestroyed(int amount) // Quando um target é destruído
     {
-        if(!scoreText) return; // Se não tiver referência para mostrar o valor do score, o resto do código do método não é lido
+        if (scoreText == null || scoreTotalText == null) return; // guard consistente
         _score += amount; // Caso tenha, o valor de score aumenta a partir de um valor, que é determinado pelo target em seu script de colisão 
         scoreText.text = "Score: " + _score; // O texto de score então é atualizado
         scoreTotalText.text = "Your total score was: " + _score; // O texto de score final é atualizado também
