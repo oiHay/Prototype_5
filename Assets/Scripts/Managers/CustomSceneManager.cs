@@ -3,16 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class CustomSceneManager : MonoBehaviour
 {
-   [SerializeField] private GameStatesEventSO gameStatesEvent;
+   [SerializeField] private GameManager gameManager; // Referência direta ao game manager
    
-   public void ResetScene()
+   public void ResetScene() // Quando a cena é resetada
    {
-      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-      gameStatesEvent.Raise(GameState.Playing);
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name); // O scene manager da load na cena avita atualmente
+      gameManager.ChangeState(GameState.Playing); // Então o método de mudança de estado do game manager é chamado
    }
 
-   public void GoToStart()
+   public void GoToStart() // Quando o jogo é direcionado ao seu início
    {
-      gameStatesEvent.Raise(GameState.Start);
+      gameManager.ChangeState(GameState.Start); // O método de mudança de estado do game manager é chamado
    }
 }
